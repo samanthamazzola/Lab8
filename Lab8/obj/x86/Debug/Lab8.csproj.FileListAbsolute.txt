@@ -1,0 +1,6 @@
+/Users/samanthamazzola/Projects/Lab8/Lab8/obj/x86/Debug/Lab8.csprojResolveAssemblyReference.cache
+/Users/samanthamazzola/Projects/Lab8/Lab8/obj/x86/Debug/Lab8.csproj.CoreCompileInputs.cache
+/Users/samanthamazzola/Projects/Lab8/Lab8/bin/Debug/Lab8.exe
+/Users/samanthamazzola/Projects/Lab8/Lab8/bin/Debug/Lab8.pdb
+/Users/samanthamazzola/Projects/Lab8/Lab8/obj/x86/Debug/Lab8.exe
+/Users/samanthamazzola/Projects/Lab8/Lab8/obj/x86/Debug/Lab8.pdb
