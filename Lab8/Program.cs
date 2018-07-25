@@ -92,9 +92,12 @@ namespace Lab8
 
             //Console.WriteLine("Student " + {userInput} + " is " + [i] + ". What would you like to know about " + [i] + " ? (enter "hometown" or "favorite food"):");
 
-           
+
             int stuNumber;
             string homeOrFood = "";
+            string foodInput = "";
+            string homeInput = "";
+
             //shows student option numbers
             Console.WriteLine("Welcome to our C# class. Which student would you like to learn more about? (enter a number from 1-20)");
             stuNumber = int.Parse(Console.ReadLine()); // takes number converts
@@ -110,30 +113,31 @@ namespace Lab8
                 else // if in range, print this student
                 {
                     Console.WriteLine("Student " + stuNumber + " is " + studentNames[stuNumber] + ". What would you like to know about " + studentNames[stuNumber] + "? (enter \"hometown\" or \"favorite food\"):");
-                    //userInput = Console.ReadLine();
+                    homeOrFood = Console.ReadLine();
                     userValidation = false; // set to false to leave loop
                 }
             }
 
-            // reset bool to control next loop 
+            // reset bool to continue to next loop 
+            userValidation = true;
 
-
-           userValidation = true;
             while (userValidation)
             {
                 if (homeOrFood == "hometown")
                 {
-                    Console.WriteLine(studentNames[stuNumber] + " is from " + stuHometown + ". Would you like to know more? Choose \"yes\" or \"no\"");  
+                    Console.WriteLine(studentNames[stuNumber] + " is from " + stuHometown[stuNumber] + ". Would you like to know more? Choose \"yes\" or \"no\"");  
+                    
                 }
 
                 else if (homeOrFood == "favorite food")
                 {
-                    Console.WriteLine(studentNames[stuNumber] + "'s " + "favorite food is "+ favFood + "."); 
+                    Console.WriteLine(studentNames[stuNumber] + "'s " + "favorite food is "+ favFood[stuNumber] + ". Would you like to know more? Choose \"yes\" or \"no\""); 
                 }
 
                 else
                 {
                     Console.WriteLine("Sorry! That data does not exist. Please try again. Enter either \"hometown\" or \"favorite food\":");
+                    homeOrFood = Console.ReadLine();
                     userValidation = false;
                 }
             }
