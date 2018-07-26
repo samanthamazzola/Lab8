@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,7 +35,7 @@ namespace Lab8
                 csharpClass.Add("16. Jacob");*/
 
             // takes string input parses to an in which is an index value and prints the name of student at that value
-                List<string> studentNames = new List<string>();
+                List<string> studentNames = new List<string>(); //0-15 values
                 //methods (Add method) to start building chain of links of a list
                 studentNames.Add("Jesse"); //first link of chain
                 studentNames.Add("Chris"); //second link of chain
@@ -95,23 +95,24 @@ namespace Lab8
 
             int stuNumber;
             string homeOrFood = "";
-            string foodInput = "";
-            string homeInput = "";
-
+            string wantToKnowMore = "";
+         
+             
             //shows student option numbers
             Console.WriteLine("Welcome to our C# class. Which student would you like to learn more about? (enter a number from 1-20)");
-            stuNumber = int.Parse(Console.ReadLine()); // takes number converts
+            stuNumber = int.Parse(Console.ReadLine()); // takes in number converts
 
-            bool userValidation = true;
-            while (userValidation) // validates int if it's in range 
+            bool userValidation = true; // while the condition is true, loop
+            while (userValidation) // validates int if it's in range
             {
-                if (stuNumber < 0 || stuNumber >= studentNames.Count) // input int range is over the # of student data true so loop 
+                if (stuNumber < 0 || stuNumber > studentNames.Count) // input int range is over the # of student data true so loop 
                 {
                     Console.WriteLine("Sorry! That student doesn't exist. Please try again with a number from (1-20)");
                     stuNumber = int.Parse(Console.ReadLine());
                 }
-                else // if in range, print this student
+                else  // if in range, print this student info
                 {
+
                     Console.WriteLine("Student " + stuNumber + " is " + studentNames[stuNumber] + ". What would you like to know about " + studentNames[stuNumber] + "? (enter \"hometown\" or \"favorite food\"):");
                     homeOrFood = Console.ReadLine();
                     userValidation = false; // set to false to leave loop
@@ -125,13 +126,16 @@ namespace Lab8
             {
                 if (homeOrFood == "hometown")
                 {
-                    Console.WriteLine(studentNames[stuNumber] + " is from " + stuHometown[stuNumber] + ". Would you like to know more? Choose \"yes\" or \"no\"");  
-                    
+                    Console.WriteLine(studentNames[stuNumber] + " is from " + stuHometown[stuNumber] + ". Would you like to know more? Choose \"yes\" or \"no\"");
+                    homeOrFood = Console.ReadLine();    
+                    //need to write for if yes or no
                 }
 
                 else if (homeOrFood == "favorite food")
                 {
-                    Console.WriteLine(studentNames[stuNumber] + "'s " + "favorite food is "+ favFood[stuNumber] + ". Would you like to know more? Choose \"yes\" or \"no\""); 
+                    Console.WriteLine(studentNames[stuNumber] + "'s " + "favorite food is "+ favFood[stuNumber] + ". Would you like to know more? Choose \"yes\" or \"no\"");
+                    homeOrFood = Console.ReadLine();
+;                    
                 }
 
                 else
